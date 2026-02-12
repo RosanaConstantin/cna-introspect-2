@@ -20,3 +20,7 @@ fields @timestamp, @message
 | filter @message like /summarize/
 | stats count() as summarize_calls by bin(10m)
 ```
+
+## Evidence
+- Add screenshots of query results to [SCREENSHOTS.md](../SCREENSHOTS.md)
+- Record query timestamps and log group names

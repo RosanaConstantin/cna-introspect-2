@@ -1,0 +1,1299 @@
+{
+    "Findings": [
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/Config.1/finding/cf4b51f3-dd54-44ab-84f5-c262eff98d8d",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/Config.1",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:29.553Z",
+            "LastObservedAt": "2025-12-03T13:33:37.760Z",
+            "CreatedAt": "2025-12-03T13:33:29.553Z",
+            "UpdatedAt": "2025-12-03T13:33:37.760Z",
+            "Severity": {
+                "Label": "CRITICAL",
+                "Normalized": 90,
+                "Original": "CRITICAL"
+            },
+            "Title": "AWS Config should be enabled and use the service-linked role for resource recording",
+            "Description": "This control checks whether AWS Config is enabled in your account in the current AWS Region, records all resources that correspond to controls that are enabled in the current Region, and uses the service-linked AWS Config role.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/Config.1/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/Config.1/finding/cf4b51f3-dd54-44ab-84f5-c262eff98d8d"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/2.5"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CONFIG_RECORDER_DISABLED",
+                        "Description": "AWS Config isn't enabled with the configuration recorder turned on."
+                    }
+                ],
+                "SecurityControlId": "Config.1",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    },
+                    {
+                        "StandardsId": "standards/aws-foundational-security-best-practices/v/1.0.0"
+                    }
+                ],
+                "SecurityControlParameters": [
+                    {
+                        "Name": "includeConfigServiceLinkedRoleCheck",
+                        "Value": [
+                            "true"
+                        ]
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "CRITICAL",
+                    "Original": "CRITICAL"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:42.361Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.9/finding/84e5dc2f-463c-429b-90d5-452c406575e3",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.9",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.378Z",
+            "LastObservedAt": "2025-12-03T13:33:36.378Z",
+            "CreatedAt": "2025-12-03T13:33:36.378Z",
+            "UpdatedAt": "2025-12-03T13:33:36.378Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for AWS Config configuration changes",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. It is recommended that a metric filter and alarm be established for detecting changes to CloudTrail's configurations.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.9/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.9/finding/84e5dc2f-463c-429b-90d5-452c406575e3"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.9"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.9",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:59.111Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.8/finding/c0622e1f-3b62-425c-9bcb-de0cf8a5d588",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.8",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.372Z",
+            "LastObservedAt": "2025-12-03T13:33:36.372Z",
+            "CreatedAt": "2025-12-03T13:33:36.372Z",
+            "UpdatedAt": "2025-12-03T13:33:36.372Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for S3 bucket policy changes",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. It is recommended that a metric filter and alarm be established for changes to S3 bucket policies.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.8/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.8/finding/c0622e1f-3b62-425c-9bcb-de0cf8a5d588"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.8"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.8",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:49.112Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.7/finding/d6fc0de6-2251-4439-bc39-dc419ae602f3",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.7",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.362Z",
+            "LastObservedAt": "2025-12-03T13:33:36.362Z",
+            "CreatedAt": "2025-12-03T13:33:36.362Z",
+            "UpdatedAt": "2025-12-03T13:33:36.362Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for disabling or scheduled deletion of customer created CMKs",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. It is recommended that a metric filter and alarm be established for customer created CMKs which have changed state to disabled or scheduled deletion.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.7/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.7/finding/d6fc0de6-2251-4439-bc39-dc419ae602f3"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.7"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.7",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:47.343Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.6/finding/9bd37ca7-9113-47d0-9262-5e16f037d066",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.6",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.344Z",
+            "LastObservedAt": "2025-12-03T13:33:36.344Z",
+            "CreatedAt": "2025-12-03T13:33:36.344Z",
+            "UpdatedAt": "2025-12-03T13:33:36.344Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for AWS Management Console authentication failures",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. It is recommended that a metric filter and alarm be established for failed console authentication attempts.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.6/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.6/finding/9bd37ca7-9113-47d0-9262-5e16f037d066"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.6"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.6",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:34:17.580Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.5/finding/5687584a-64d7-4f08-8192-0eae5f182604",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.5",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.309Z",
+            "LastObservedAt": "2025-12-03T13:33:36.309Z",
+            "CreatedAt": "2025-12-03T13:33:36.309Z",
+            "UpdatedAt": "2025-12-03T13:33:36.309Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for CloudTrail configuration changes",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. It is recommended that a metric filter and alarm be established for detecting changes to CloudTrail's configurations.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.5/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.5/finding/5687584a-64d7-4f08-8192-0eae5f182604"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.5"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.5",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:34:01.742Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.4/finding/8ca8ddbf-8255-464c-9224-30d4fdfeb08b",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.4",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.302Z",
+            "LastObservedAt": "2025-12-03T13:33:36.302Z",
+            "CreatedAt": "2025-12-03T13:33:36.302Z",
+            "UpdatedAt": "2025-12-03T13:33:36.302Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for IAM policy changes",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. It is recommended that a metric filter and alarm be established changes made to Identity and Access Management (IAM) policies.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.4/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.4/finding/8ca8ddbf-8255-464c-9224-30d4fdfeb08b"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.4"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.4",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:34:09.640Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.1/finding/af2b4cdf-f4eb-4094-b265-113309a37f03",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.1",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.295Z",
+            "LastObservedAt": "2025-12-03T13:33:36.295Z",
+            "CreatedAt": "2025-12-03T13:33:36.295Z",
+            "UpdatedAt": "2025-12-03T13:33:36.295Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "A log metric filter and alarm should exist for usage of the \"root\" user",
+            "Description": "This control checks for the CloudWatch metric filters using the following pattern { $.userIdentity.type = \"Root\" && $.userIdentity.invokedBy NOT EXISTS && $.eventType != \"AwsServiceEvent\" } It checks that the log group name is configured for use with active multi-region CloudTrail, that there is at least one Event Selector for a Trail with IncludeManagementEvents set to true and ReadWriteType set to All, and that there is at least one active subscriber to an SNS topic associated with the alarm.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.1/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.1/finding/af2b4cdf-f4eb-4094-b265-113309a37f03"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/1.1",
+                    "CIS AWS Foundations Benchmark v1.2.0/3.3"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.1",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:58.087Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.3/finding/e2b7704c-fef6-4116-b668-728da212aa15",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.3",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.285Z",
+            "LastObservedAt": "2025-12-03T13:33:36.285Z",
+            "CreatedAt": "2025-12-03T13:33:36.285Z",
+            "UpdatedAt": "2025-12-03T13:33:36.285Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for Management Console sign-in without MFA",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. It is recommended that a metric filter and alarm be established for console logins that are not protected by multi-factor authentication (MFA).",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.3/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.3/finding/e2b7704c-fef6-4116-b668-728da212aa15"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.2"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.3",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:49.205Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.14/finding/fa21c643-02a6-4bec-a321-348576718e7e",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.14",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.278Z",
+            "LastObservedAt": "2025-12-03T13:33:36.278Z",
+            "CreatedAt": "2025-12-03T13:33:36.278Z",
+            "UpdatedAt": "2025-12-03T13:33:36.278Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for VPC changes",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. It is possible to have more than 1 VPC within an account, in addition it is also possible to create a peer connection between 2 VPCs enabling network traffic to route between VPCs. It is recommended that a metric filter and alarm be established for changes made to VPCs.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.14/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.14/finding/fa21c643-02a6-4bec-a321-348576718e7e"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.14"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.14",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:34:09.920Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.13/finding/06b48334-cdef-4895-903e-c3c2e49dd8e8",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.13",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.270Z",
+            "LastObservedAt": "2025-12-03T13:33:36.270Z",
+            "CreatedAt": "2025-12-03T13:33:36.270Z",
+            "UpdatedAt": "2025-12-03T13:33:36.270Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for route table changes",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. Routing tables are used to route network traffic between subnets and to network gateways. It is recommended that a metric filter and alarm be established for changes to route tables.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.13/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.13/finding/06b48334-cdef-4895-903e-c3c2e49dd8e8"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.13"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.13",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:56.856Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.12/finding/2fe58558-95b6-4d14-a6b1-21053ed15da2",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.12",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.262Z",
+            "LastObservedAt": "2025-12-03T13:33:36.262Z",
+            "CreatedAt": "2025-12-03T13:33:36.262Z",
+            "UpdatedAt": "2025-12-03T13:33:36.262Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for changes to network gateways",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. Network gateways are required to send/receive traffic to a destination outside of a VPC. It is recommended that a metric filter and alarm be established for changes to network gateways.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.12/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.12/finding/2fe58558-95b6-4d14-a6b1-21053ed15da2"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.12"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.12",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:45.303Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.11/finding/c12825a4-94dd-40f7-9ea2-511b70cad4f2",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.11",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.255Z",
+            "LastObservedAt": "2025-12-03T13:33:36.255Z",
+            "CreatedAt": "2025-12-03T13:33:36.255Z",
+            "UpdatedAt": "2025-12-03T13:33:36.255Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for changes to Network Access Control Lists (NACL)",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. NACLs are used as a stateless packet filter to control ingress and egress traffic for subnets within a VPC. It is recommended that a metric filter and alarm be established for changes made to NACLs.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.11/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.11/finding/c12825a4-94dd-40f7-9ea2-511b70cad4f2"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.11"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.11",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:43.519Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.10/finding/039fc433-1dbf-49f5-8e8a-6a2139280dca",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.10",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.248Z",
+            "LastObservedAt": "2025-12-03T13:33:36.248Z",
+            "CreatedAt": "2025-12-03T13:33:36.248Z",
+            "UpdatedAt": "2025-12-03T13:33:36.248Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for security group changes",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. Security Groups are a stateful packet filter that controls ingress and egress traffic within a VPC. It is recommended that a metric filter and alarm be established changes to Security Groups.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.10/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.10/finding/039fc433-1dbf-49f5-8e8a-6a2139280dca"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.10"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.10",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:47.813Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.2/finding/d81dc3c5-eeb2-4fe3-bd01-65be911bea12",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/securityhub",
+            "ProductName": "Security Hub",
+            "CompanyName": "AWS",
+            "Region": "us-east-1",
+            "GeneratorId": "security-control/CloudWatch.2",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "Software and Configuration Checks/Industry and Regulatory Standards"
+            ],
+            "FirstObservedAt": "2025-12-03T13:33:36.240Z",
+            "LastObservedAt": "2025-12-03T13:33:36.240Z",
+            "CreatedAt": "2025-12-03T13:33:36.240Z",
+            "UpdatedAt": "2025-12-03T13:33:36.240Z",
+            "Severity": {
+                "Label": "LOW",
+                "Normalized": 1,
+                "Original": "LOW"
+            },
+            "Title": "Ensure a log metric filter and alarm exist for unauthorized API calls",
+            "Description": "Real-time monitoring of API calls can be achieved by directing CloudTrail Logs to CloudWatch Logs and establishing corresponding metric filters and alarms. It is recommended that a metric filter and alarm be established for unauthorized API calls.",
+            "Remediation": {
+                "Recommendation": {
+                    "Text": "For information on how to correct this issue, consult the AWS Security Hub controls documentation.",
+                    "Url": "https://docs.aws.amazon.com/console/securityhub/CloudWatch.2/remediation"
+                }
+            },
+            "ProductFields": {
+                "aws/securityhub/ProductName": "Security Hub",
+                "aws/securityhub/CompanyName": "AWS",
+                "aws/securityhub/annotation": "Multi region CloudTrail with the required configuration does not exist in the account",
+                "Resources:0/Id": "arn:aws:iam::335444506576:root",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/securityhub/arn:aws:securityhub:us-east-1:335444506576:security-control/CloudWatch.2/finding/d81dc3c5-eeb2-4fe3-bd01-65be911bea12"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsAccount",
+                    "Id": "AWS::::Account:335444506576",
+                    "Partition": "aws",
+                    "Region": "us-east-1"
+                }
+            ],
+            "Compliance": {
+                "Status": "FAILED",
+                "RelatedRequirements": [
+                    "CIS AWS Foundations Benchmark v1.2.0/3.1"
+                ],
+                "StatusReasons": [
+                    {
+                        "ReasonCode": "CLOUDTRAIL_MULTI_REGION_NOT_PRESENT",
+                        "Description": "Multi region CloudTrail with the required configuration does not exist in the account"
+                    }
+                ],
+                "SecurityControlId": "CloudWatch.2",
+                "AssociatedStandards": [
+                    {
+                        "StandardsId": "ruleset/cis-aws-foundations-benchmark/v/1.2.0"
+                    }
+                ]
+            },
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW",
+                    "Original": "LOW"
+                },
+                "Types": [
+                    "Software and Configuration Checks/Industry and Regulatory Standards"
+                ]
+            },
+            "ProcessedAt": "2025-12-03T13:33:50.122Z"
+        },
+        {
+            "SchemaVersion": "2018-10-08",
+            "Id": "arn:aws:guardduty:us-east-1:335444506576:detector/60cd7214f7ed620a0b4238c7fbe1b7a5/finding/a2cd722db8e12ebef6accd8e07c87de6",
+            "ProductArn": "arn:aws:securityhub:us-east-1::product/aws/guardduty",
+            "ProductName": "GuardDuty",
+            "CompanyName": "Amazon",
+            "Region": "us-east-1",
+            "GeneratorId": "arn:aws:guardduty:us-east-1:335444506576:detector/60cd7214f7ed620a0b4238c7fbe1b7a5",
+            "AwsAccountId": "335444506576",
+            "Types": [
+                "TTPs/Defense Evasion/Stealth:IAMUser-CloudTrailLoggingDisabled"
+            ],
+            "FirstObservedAt": "2025-12-03T12:59:40.000Z",
+            "LastObservedAt": "2025-12-03T12:59:40.000Z",
+            "CreatedAt": "2025-12-03T13:16:29.506Z",
+            "UpdatedAt": "2025-12-03T13:16:29.506Z",
+            "Severity": {
+                "Product": 2.0,
+                "Label": "LOW",
+                "Normalized": 40
+            },
+            "Title": "An AWS CloudTrail trail arn:aws:cloudtrail:us-east-1:335444506576:trail/management-events was disabled.",
+            "Description": "AWS CloudTrail trail arn:aws:cloudtrail:us-east-1:335444506576:trail/management-events was disabled by c04-vlabuser164@stackroute.in calling DeleteTrail under unusual circumstances. This can be attackers attempt to cover their tracks by eliminating any trace of activity performed while they accessed your account.",
+            "SourceUrl": "https://us-east-1.console.aws.amazon.com/guardduty/home?region=us-east-1#/findings?macros=current&fId=a2cd722db8e12ebef6accd8e07c87de6",
+            "ProductFields": {
+                "aws/guardduty/service/archived": "false",
+                "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/asnOrg": "Digi Romania S.A.",
+                "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/org": "Digi Romania",
+                "aws/guardduty/service/additionalInfo/value": "",
+                "aws/guardduty/service/action/awsApiCallAction/affectedResources/AWS::CloudTrail::Trail": "arn:aws:cloudtrail:us-east-1:335444506576:trail/management-events",
+                "aws/guardduty/service/resourceRole": "TARGET",
+                "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/isp": "Digi Romania",
+                "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/geoLocation/lat": "44.4946",
+                "aws/guardduty/service/count": "1",
+                "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/ipAddressV4": "82.76.227.144",
+                "aws/guardduty/service/action/awsApiCallAction/callerType": "Remote IP",
+                "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/country/countryName": "Romania",
+                "aws/guardduty/service/action/awsApiCallAction/serviceName": "cloudtrail.amazonaws.com",
+                "aws/guardduty/service/additionalInfo/type": "default",
+                "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/city/cityName": "Bucharest",
+                "aws/guardduty/service/action/awsApiCallAction/api": "DeleteTrail",
+                "aws/guardduty/service/serviceName": "guardduty",
+                "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/geoLocation/lon": "26.0578",
+                "aws/guardduty/service/detectorId": "60cd7214f7ed620a0b4238c7fbe1b7a5",
+                "aws/guardduty/service/action/awsApiCallAction/remoteIpDetails/organization/asn": "8708",
+                "aws/guardduty/service/eventFirstSeen": "2025-12-03T12:59:40.000Z",
+                "aws/guardduty/service/eventLastSeen": "2025-12-03T12:59:40.000Z",
+                "aws/guardduty/service/action/actionType": "AWS_API_CALL",
+                "aws/securityhub/FindingId": "arn:aws:securityhub:us-east-1::product/aws/guardduty/arn:aws:guardduty:us-east-1:335444506576:detector/60cd7214f7ed620a0b4238c7fbe1b7a5/finding/a2cd722db8e12ebef6accd8e07c87de6",
+                "aws/securityhub/ProductName": "GuardDuty",
+                "aws/securityhub/CompanyName": "Amazon"
+            },
+            "Resources": [
+                {
+                    "Type": "AwsIamAccessKey",
+                    "Id": "AWS::IAM::AccessKey:ASIAU4GQM67IJIPXKZIH",
+                    "Partition": "aws",
+                    "Region": "us-east-1",
+                    "Details": {
+                        "AwsIamAccessKey": {
+                            "PrincipalId": "335444506576:c04-vlabuser164@stackroute.in",
+                            "PrincipalType": "FederatedUser",
+                            "PrincipalName": "c04-vlabuser164@stackroute.in"
+                        }
+                    }
+                }
+            ],
+            "WorkflowState": "NEW",
+            "Workflow": {
+                "Status": "NEW"
+            },
+            "RecordState": "ACTIVE",
+            "Action": {
+                "ActionType": "AWS_API_CALL",
+                "AwsApiCallAction": {
+                    "Api": "DeleteTrail",
+                    "ServiceName": "cloudtrail.amazonaws.com",
+                    "CallerType": "remoteIp",
+                    "RemoteIpDetails": {
+                        "IpAddressV4": "82.76.227.144",
+                        "Organization": {
+                            "Asn": 8708,
+                            "AsnOrg": "Digi Romania S.A.",
+                            "Isp": "Digi Romania",
+                            "Org": "Digi Romania"
+                        },
+                        "Country": {
+                            "CountryCode": "RO",
+                            "CountryName": "Romania"
+                        },
+                        "City": {
+                            "CityName": "Bucharest"
+                        },
+                        "GeoLocation": {
+                            "Lon": 26.0578,
+                            "Lat": 44.4946
+                        }
+                    },
+                    "AffectedResources": {
+                        "AWS::CloudTrail::Trail": "arn:aws:cloudtrail:us-east-1:335444506576:trail/management-events"
+                    }
+                }
+            },
+            "FindingProviderFields": {
+                "Severity": {
+                    "Label": "LOW"
+                },
+                "Types": [
+                    "TTPs/Defense Evasion/Stealth:IAMUser-CloudTrailLoggingDisabled"
+                ]
+            },
+            "Sample": false,
+            "ProcessedAt": "2025-12-03T13:20:07.588Z"
+        }
+    ]
+}

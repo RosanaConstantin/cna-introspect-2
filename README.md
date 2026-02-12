@@ -6,6 +6,8 @@
 
 This repository implements Introspect 2B: a GenAI-enabled Claim Status API deployed on Amazon EKS (EC2 worker nodes) and exposed via Amazon API Gateway. It includes infrastructure-as-code, CI/CD automation, security/observability artifacts, and documentation.
 
+> **Note on Bedrock Model Access**: Serverless foundation models are automatically enabled when first invoked. For Anthropic models, first-time users must submit use case details at first invocation. The API includes automatic fallback to mock summaries if Bedrock access is not yet available.
+
 ## Architecture (High-Level)
 
 ```
@@ -24,6 +26,42 @@ See [architecture-diagram.md](architecture-diagram.md) for a detailed flow and c
 - CI/CD with CodePipeline + CodeBuild
 - Security scanning with Inspector + Security Hub
 - Observability via CloudWatch Logs/metrics
+
+## Architecture & Design Rationale
+- **EKS on EC2**: satisfies enterprise constraints and avoids Fargate.
+- **API Gateway + NLB/Ingress**: decouples public API lifecycle from cluster services.
+- **DynamoDB + S3**: separates structured claim status from unstructured notes.
+- **Bedrock**: summaries and recommendations are generated on demand for each claim.
+
+## Trade-offs
+- **API Gateway proxy** simplifies exposure, but adds cost/latency vs direct NLB access.
+- **PAY_PER_REQUEST DynamoDB** reduces ops overhead but may cost more at scale.
+- **S3 per-claim notes** improves auditability but requires object naming conventions.
+
+## Modernization Strategy
+- Start with a containerized API on EKS.
+- Isolate GenAI interaction behind a single endpoint.
+- Gradually split into microservices (claims, notes, summarization) once traffic grows.
+
+## Security & Compliance
+- **IRSA** for pod-to-AWS access (no static credentials).
+- **Inspector** for container scan and **Security Hub** for centralized findings.
+- **S3/DynamoDB** access scoped to least privilege (documented in IRSA policy).
+
+## Scalability & Resilience
+- **HPA** for API pods.
+- Multi-AZ worker nodes in EKS.
+- Stateless API design; data in DynamoDB/S3.
+
+## Observability
+- CloudWatch Logs for application logs.
+- Logs Insights queries in [observability/queries.md](observability/queries.md).
+- Add screenshots in [SCREENSHOTS.md](SCREENSHOTS.md).
+
+## CI/CD
+- CodeBuild build spec: [pipelines/buildspec-build.yml](pipelines/buildspec-build.yml)
+- CodeBuild deploy spec: [pipelines/buildspec-deploy.yml](pipelines/buildspec-deploy.yml)
+- Pipeline skeleton: [pipelines/codepipeline.yaml](pipelines/codepipeline.yaml)
 
 ## Project Structure
 
@@ -108,6 +146,16 @@ Full prompt templates are in [bedrock-insights.md](bedrock-insights.md).
 - Use EC2 worker nodes (no Fargate).
 - Replace placeholders for ARNs, account IDs, and endpoints.
 - Add screenshots/links as you validate components.
+
+## Evidence & Screenshots
+- [SCREENSHOTS.md](SCREENSHOTS.md)
+- [scans/README.md](scans/README.md)
+
+## Future Roadmap
+- Add request validation + schema enforcement.
+- Add rate limiting and WAF protection at API Gateway.
+- Implement blue/green deployments in CodePipeline.
+- Add caching for frequent summary requests.
 
 ## License
 Educational use only for Cloud Native Application certification.

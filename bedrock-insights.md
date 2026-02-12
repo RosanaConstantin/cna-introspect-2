@@ -18,6 +18,11 @@
 - Use a text model with deterministic output (low temperature)
 - Enforce JSON schema response for downstream processing
 
+## Model Access
+- Bedrock serverless models are auto-enabled on first invocation
+- Anthropic models require use case submission for first-time users
+- API includes automatic fallback to mock summaries when model access is pending
+
 ## Safety + Compliance
 - Avoid PII leakage by redacting sensitive fields before summarization
 - Maintain prompt logs for auditability

@@ -28,12 +28,22 @@ terraform apply
 ./scripts/deploy.sh
 ```
 
+## 3a) Seed Data (DynamoDB + S3)
+```bash
+./scripts/seed-data.sh
+```
+
 ## 4) Configure API Gateway
 Import [apigw/openapi.json](apigw/openapi.json) and set the backend integration to your EKS ingress/NLB URL.
 
 ## 5) Verify
 ```bash
 ./scripts/check-deployment.sh
+```
+
+## 6) Test Endpoints
+```bash
+./scripts/test.sh
 ```
 
 ## Cleanup

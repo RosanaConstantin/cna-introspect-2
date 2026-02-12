@@ -15,7 +15,7 @@
         "x-amazon-apigateway-integration": {
           "type": "http_proxy",
           "httpMethod": "GET",
-          "uri": "https://<INGRESS_OR_NLB>/claims/health",
+          "uri": "http://a88fb53cff9ab467aa258cf5d46e5c36-85482127.us-east-1.elb.amazonaws.com/claims/health",
           "passthroughBehavior": "when_no_match",
           "requestParameters": {},
           "responses": {
@@ -46,7 +46,7 @@
         "x-amazon-apigateway-integration": {
           "type": "http_proxy",
           "httpMethod": "GET",
-          "uri": "https://<INGRESS_OR_NLB>/claims/{id}",
+          "uri": "http://a88fb53cff9ab467aa258cf5d46e5c36-85482127.us-east-1.elb.amazonaws.com/claims/{id}",
           "passthroughBehavior": "when_no_match",
           "requestParameters": {
             "integration.request.path.id": "method.request.path.id"
@@ -79,7 +79,7 @@
         "x-amazon-apigateway-integration": {
           "type": "http_proxy",
           "httpMethod": "POST",
-          "uri": "https://<INGRESS_OR_NLB>/claims/{id}/summarize",
+          "uri": "http://a88fb53cff9ab467aa258cf5d46e5c36-85482127.us-east-1.elb.amazonaws.com/claims/{id}/summarize",
           "passthroughBehavior": "when_no_match",
           "requestParameters": {
             "integration.request.path.id": "method.request.path.id"
