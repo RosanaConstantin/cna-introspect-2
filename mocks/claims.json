@@ -1,0 +1,7 @@
+[
+  {"id":"CLM-1001","status":"OPEN","policyId":"POL-9001","lossDate":"2024-11-02","amount":5200},
+  {"id":"CLM-1002","status":"IN_REVIEW","policyId":"POL-9002","lossDate":"2024-10-12","amount":12000},
+  {"id":"CLM-1003","status":"APPROVED","policyId":"POL-9003","lossDate":"2024-09-08","amount":3500},
+  {"id":"CLM-1004","status":"DENIED","policyId":"POL-9004","lossDate":"2024-08-19","amount":9800},
+  {"id":"CLM-1005","status":"OPEN","policyId":"POL-9005","lossDate":"2024-11-28","amount":4400}
+]

@@ -1,0 +1,37 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "Claim Status API",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/claims/{id}": {
+      "get": {
+        "parameters": [
+          {"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}
+        ],
+        "responses": {"200": {"description": "OK"}},
+        "x-amazon-apigateway-integration": {
+          "type": "http_proxy",
+          "httpMethod": "GET",
+          "uri": "https://<INGRESS_OR_NLB>/claims/{id}",
+          "passthroughBehavior": "when_no_match"
+        }
+      }
+    },
+    "/claims/{id}/summarize": {
+      "post": {
+        "parameters": [
+          {"name": "id", "in": "path", "required": true, "schema": {"type": "string"}}
+        ],
+        "responses": {"200": {"description": "OK"}},
+        "x-amazon-apigateway-integration": {
+          "type": "http_proxy",
+          "httpMethod": "POST",
+          "uri": "https://<INGRESS_OR_NLB>/claims/{id}/summarize",
+          "passthroughBehavior": "when_no_match"
+        }
+      }
+    }
+  }
+}
