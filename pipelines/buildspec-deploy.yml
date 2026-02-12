@@ -1,0 +1,9 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - aws eks update-kubeconfig --name $EKS_CLUSTER --region $AWS_REGION
+  build:
+    commands:
+      - kubectl apply -f k8s/

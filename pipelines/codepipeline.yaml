@@ -1,0 +1,21 @@
+version: 1
+
+pipeline:
+  name: claim-api-pipeline
+  stages:
+    - name: Source
+      actions:
+        - name: Source
+          provider: GitHub
+          outputArtifacts: [SourceOutput]
+    - name: Build
+      actions:
+        - name: BuildImage
+          provider: CodeBuild
+          inputArtifacts: [SourceOutput]
+          outputArtifacts: [BuildOutput]
+    - name: Deploy
+      actions:
+        - name: DeployToEKS
+          provider: CodeBuild
+          inputArtifacts: [BuildOutput]
