@@ -1,3 +1,13 @@
+# Sensitive Data
+scans/security-hub-findings.json
+scans/inspector-findings.json
+*.key
+*.pem
+*.env
+.env
+.env.local
+credentials.json
+
 # Logs
 logs
 *.log
