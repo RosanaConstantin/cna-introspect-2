@@ -41,5 +41,4 @@ ls -lh "$OBSERVABILITY_DIR/logs/" || true
 echo ""
 echo "Next steps:"
 echo "1. Run CloudWatch Logs Insights queries from observability/queries.md"
-echo "2. Take screenshots of query results"
-echo "3. Save to screenshots/cloudwatch-insights.png"
+echo "2. Document query results in your validation report"

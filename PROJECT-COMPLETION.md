@@ -17,13 +17,13 @@
 - [ ] Bedrock model access approved and validated
 
 ## Evidence Checklist
-- [ ] API Gateway invocation screenshot
+- [ ] API Gateway invocation validated
 - [ ] CloudWatch Logs Insights queries saved
 - [ ] Inspector findings captured
-- [ ] Security Hub overview screenshot
+- [ ] Security Hub findings documented
 - [ ] Architecture rationale documented
 - [ ] CI/CD pipeline run evidence (build + deploy)
-- [ ] EKS node group screenshot
+- [ ] EKS node group validated
 
 ## Notes
 Record trade-offs, constraints, and decisions in README.

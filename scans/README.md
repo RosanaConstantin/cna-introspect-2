@@ -1,6 +1,6 @@
 # Security Scans
 
-Add links or screenshots for:
+Document evidence for:
 - Amazon Inspector container scan findings
 - Security Hub aggregated findings
 - Remediation notes and priority

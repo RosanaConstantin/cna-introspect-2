@@ -22,5 +22,4 @@ curl -X POST https://<api-gateway-url>/claims/CLM-1001/summarize
 - `POST /claims/{id}/summarize` returns a JSON response with four summaries.
 
 ## Evidence
-- Add API Gateway test screenshots to [SCREENSHOTS.md](SCREENSHOTS.md).
 - Add CloudWatch log samples to [observability/queries.md](observability/queries.md).

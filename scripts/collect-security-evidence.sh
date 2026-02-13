@@ -57,5 +57,4 @@ fi
 echo ""
 echo "Next steps:"
 echo "1. Review findings in $SCANS_DIR"
-echo "2. Add screenshots from AWS Console to screenshots/"
-echo "3. Document remediation plan in scans/README.md"
+echo "2. Document remediation plan in scans/README.md"

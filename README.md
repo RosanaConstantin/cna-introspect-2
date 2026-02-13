@@ -56,7 +56,6 @@ See [architecture-diagram.md](architecture-diagram.md) for a detailed flow and c
 ## Observability
 - CloudWatch Logs for application logs.
 - Logs Insights queries in [observability/queries.md](observability/queries.md).
-- Add screenshots in [SCREENSHOTS.md](SCREENSHOTS.md).
 
 ## CI/CD
 - CodeBuild build spec: [pipelines/buildspec-build.yml](pipelines/buildspec-build.yml)
@@ -70,7 +69,6 @@ cna-introspect-2/
 ├── README.md
 ├── DEPLOYMENT.md
 ├── TESTING.md
-├── SCREENSHOTS.md
 ├── PROJECT-COMPLETION.md
 ├── architecture-diagram.md
 ├── bedrock-insights.md
@@ -145,10 +143,7 @@ Full prompt templates are in [bedrock-insights.md](bedrock-insights.md).
 ## Notes
 - Use EC2 worker nodes (no Fargate).
 - Replace placeholders for ARNs, account IDs, and endpoints.
-- Add screenshots/links as you validate components.
-
-## Evidence & Screenshots
-- [SCREENSHOTS.md](SCREENSHOTS.md)
+- Document evidence and validation results as you progress.
 - [scans/README.md](scans/README.md)
 
 ## Future Roadmap

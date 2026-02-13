@@ -22,5 +22,5 @@ fields @timestamp, @message
 ```
 
 ## Evidence
-- Add screenshots of query results to [SCREENSHOTS.md](../SCREENSHOTS.md)
+- Document query results and findings in your validation process
 - Record query timestamps and log group names
