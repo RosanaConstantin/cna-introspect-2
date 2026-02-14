@@ -3,7 +3,7 @@ set -euo pipefail
 
 AWS_PROFILE=${AWS_PROFILE:-org-demo}
 AWS_REGION=${AWS_REGION:-us-east-1}
-API_NAME="Claim Status API"
+API_NAME="claim-api"
 
 echo "Testing API Gateway endpoints..."
 

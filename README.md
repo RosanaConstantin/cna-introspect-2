@@ -60,7 +60,9 @@ See [architecture-diagram.md](architecture-diagram.md) for a detailed flow and c
 ## CI/CD
 - CodeBuild build spec: [pipelines/buildspec-build.yml](pipelines/buildspec-build.yml)
 - CodeBuild deploy spec: [pipelines/buildspec-deploy.yml](pipelines/buildspec-deploy.yml)
-- Pipeline skeleton: [pipelines/codepipeline.yaml](pipelines/codepipeline.yaml)
+- Pipeline definition: [pipelines/codepipeline.yaml](pipelines/codepipeline.yaml)
+- **Status & Usage**: [PIPELINE-STATUS.md](PIPELINE-STATUS.md)
+- **Troubleshooting History**: [PIPELINE-TROUBLESHOOTING.md](PIPELINE-TROUBLESHOOTING.md)
 
 ## Project Structure
 
@@ -69,7 +71,6 @@ cna-introspect-2/
 ├── README.md
 ├── DEPLOYMENT.md
 ├── TESTING.md
-├── PROJECT-COMPLETION.md
 ├── architecture-diagram.md
 ├── bedrock-insights.md
 ├── src/

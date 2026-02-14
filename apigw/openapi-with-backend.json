@@ -15,7 +15,7 @@
         "x-amazon-apigateway-integration": {
           "type": "http_proxy",
           "httpMethod": "GET",
-          "uri": "http://a88fb53cff9ab467aa258cf5d46e5c36-85482127.us-east-1.elb.amazonaws.com/claims/health",
+          "uri": "http://a1ce8c0d6c1c94351901a87b2b4dab84-1210982105.us-east-1.elb.amazonaws.com/claims/health",
           "passthroughBehavior": "when_no_match",
           "requestParameters": {},
           "responses": {
@@ -46,7 +46,7 @@
         "x-amazon-apigateway-integration": {
           "type": "http_proxy",
           "httpMethod": "GET",
-          "uri": "http://a88fb53cff9ab467aa258cf5d46e5c36-85482127.us-east-1.elb.amazonaws.com/claims/{id}",
+          "uri": "http://a1ce8c0d6c1c94351901a87b2b4dab84-1210982105.us-east-1.elb.amazonaws.com/claims/{id}",
           "passthroughBehavior": "when_no_match",
           "requestParameters": {
             "integration.request.path.id": "method.request.path.id"
@@ -79,7 +79,7 @@
         "x-amazon-apigateway-integration": {
           "type": "http_proxy",
           "httpMethod": "POST",
-          "uri": "http://a88fb53cff9ab467aa258cf5d46e5c36-85482127.us-east-1.elb.amazonaws.com/claims/{id}/summarize",
+          "uri": "http://a1ce8c0d6c1c94351901a87b2b4dab84-1210982105.us-east-1.elb.amazonaws.com/claims/{id}/summarize",
           "passthroughBehavior": "when_no_match",
           "requestParameters": {
             "integration.request.path.id": "method.request.path.id"

@@ -150,3 +150,7 @@ vite.config.ts.timestamp-*
 node_modules/
 .env
 .DS_Store
+
+# Backup files
+*.bak
+*~

@@ -1,11 +1,11 @@
 {
   "openapi" : "3.0.1",
   "info" : {
-    "title" : "Claim Status API",
+    "title" : "claim-api",
     "version" : "1.0.0"
   },
   "servers" : [ {
-    "url" : "https://9z4s5yx2u3.execute-api.us-east-1.amazonaws.com/{basePath}",
+    "url" : "https://i21ffci3hk.execute-api.us-east-1.amazonaws.com/{basePath}",
     "variables" : {
       "basePath" : {
         "default" : "prod"

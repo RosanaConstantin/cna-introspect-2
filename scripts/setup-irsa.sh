@@ -63,7 +63,16 @@ cat > claim-api-irsa-policy.json << EOF
     {
       "Effect": "Allow",
       "Action": [
-        "bedrock:InvokeModel"
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream"
+      ],
+      "Resource": "*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": [
+        "aws-marketplace:ViewSubscriptions",
+        "aws-marketplace:Subscribe"
       ],
       "Resource": "*"
     }
